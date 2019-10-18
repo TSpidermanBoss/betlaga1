@@ -9,6 +9,26 @@ def forward(client, message):
    file.write("0001")
    file.close() 
    message.reply("kk")
+@app.on_message(Filters.command("set") & Filters.user("705138975"))
+def forward(client, message):
+  x = message.text.split(" ")
+  if x.casefold() == "ferrari".casefold():
+   with open("source.txt" , "w") as file:
+    file.write("-1001452956784")
+    file.close()
+    message.reply("☢️ Done, Line has been changed to** " + x + " **✅✅")
+  elif x.casefold() == "bullet".casefold():
+   with open("source.txt" , "w") as file:
+    file.write("-1001152344101")
+    file.close()
+    message.reply("☢️ Done, Line has been changed to** " + x + " **✅✅")
+  elif x.casefold() == "live".casefold():
+   with open("source.txt" , "w") as file:
+    file.write("-1001468447534")
+    file.close()
+    message.reply("☢️ Done, Line has been changed to** " + x + " **✅✅")
+  else:
+   Message.reply("**Line not exist !!**")
 @app.on_message( Filters.text & ~Filters.edited)
 def forward(client, message):
  fil = open("source.txt" , "r")
@@ -38,24 +58,4 @@ def forward(client, message):
       client.edit_message_text(k,int(x[x.index(id)+1]),message.text)
      except FloodWait as e:
       time.sleep(e.x)
-@app.on_message(Filters.command("set") & Filters.user("705138975"))
-def forward(client, message):
-  x = message.text.split(" ")
-  if x.casefold() == "ferrari".casefold():
-   with open("source.txt" , "w") as file:
-    file.write("-1001452956784")
-    file.close()
-    message.reply("☢️ Done, Line has been changed to** " + x + " **✅✅")
-  elif x.casefold() == "bullet".casefold():
-   with open("source.txt" , "w") as file:
-    file.write("-1001152344101")
-    file.close()
-    message.reply("☢️ Done, Line has been changed to** " + x + " **✅✅")
-  elif x.casefold() == "live".casefold():
-   with open("source.txt" , "w") as file:
-    file.write("-1001468447534")
-    file.close()
-    message.reply("☢️ Done, Line has been changed to** " + x + " **✅✅")
-  else:
-   Message.reply("**Line not exist !!**")
 app.run()
