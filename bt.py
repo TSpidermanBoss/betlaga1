@@ -1,7 +1,7 @@
 from pyrogram import Client, Filters
 from pyrogram.errors import FloodWait
 import time
-app = Client("session",bot_token="863961400:AAG3kaHMrOsklKBP3fGEn7T4rTyC1dXkRTc",api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
+app = Client("session",bot_token="790494538:AAHb1mX0CI31eIl3nSpCAoY92bmYeLYdBSM",api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
 k = -1001289914295
 @app.on_message(Filters.command("clr"))
 def forward(client, message):
