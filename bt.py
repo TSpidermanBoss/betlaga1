@@ -83,6 +83,6 @@ ex. ```/set ferrari`` to set line as ferrari
  
  use this command after every match to make bot clear and fast 
 
-For more info - @Google_Console """
+For more info - @Google_Console """)
 
 app.run()
