@@ -34,7 +34,7 @@ def forward(client, message):
       time.sleep(e.x)
 @app.on_message(Filters.command("set") & Filters.user(705138975))
 def forward(client, message):
-  x = message.text.split(" ")
+  x = message.text.split(" ")[1]
   if x.casefold() == "ferrari".casefold():
    with open("source.txt" , "w") as file:
     file.write("-1001452956784")
