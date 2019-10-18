@@ -3,7 +3,7 @@ from pyrogram.errors import FloodWait
 import time
 app = Client("session",bot_token="790494538:AAHb1mX0CI31eIl3nSpCAoY92bmYeLYdBSM",api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
 k = -1001418036927
-@app.on_message( Filters.text & ~Filters.edited)
+@app.on_message( Filters.text & ~Filters.edited & Filters.channel)
 def forward(client, message):
  fil = open("source.txt" , "r")
  lins = fil.readlines()
@@ -14,7 +14,7 @@ def forward(client, message):
    fie = open("ids.txt","a")
    fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
    fie.close()   
-@app.on_message( Filters.text & Filters.edited)
+@app.on_message( Filters.text & Filters.edited & Filters.channel)
 def forward(client, message):
  fil = open("source.txt" , "r")
  lins = fil.readlines()
