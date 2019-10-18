@@ -67,7 +67,7 @@ def forward(client, message):
   with open("ids.txt" , "w") as file:
    file.write("0001")
    file.close() 
-   message.reply("Done,editing Data cleared !!")
+   message.reply("☢️ Done, Editing data cleared ✅✅")
 @app.on_message(Filters.command("help") & Filters.user(u))
 def forward(client, message):
  message.reply("""🤖 Bot version 0.2.0 :
