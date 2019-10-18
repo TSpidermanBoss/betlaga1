@@ -41,17 +41,17 @@ def forward(client, message):
 @app.on_message(Filters.command("set") & Filter.user("705138975"))
 def forward(client, message):
   x = message.text.split(" ")
-  if x.casefold() == "ferrari".casefold()
+  if x.casefold() == "ferrari".casefold():
    with open("source.txt" , "w") as file:
     file.write("-1001452956784")
     file.close()
     message.reply("☢️ Done, Line has been changed to** " + x + " **✅✅")
-  elif x.casefold() == "bullet".casefold()
+  elif x.casefold() == "bullet".casefold():
    with open("source.txt" , "w") as file:
     file.write("-1001152344101")
     file.close()
     message.reply("☢️ Done, Line has been changed to** " + x + " **✅✅")
-  elif x.casefold() == "live".casefold()
+  elif x.casefold() == "live".casefold():
    with open("source.txt" , "w") as file:
     file.write("-1001468447534")
     file.close()
