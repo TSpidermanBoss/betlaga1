@@ -38,7 +38,7 @@ def forward(client, message):
       client.edit_message_text(k,int(x[x.index(id)+1]),message.text)
      except FloodWait as e:
       time.sleep(e.x)
-@app.on_message(Filters.command("set") & Filter.user("705138975"))
+@app.on_message(Filters.command("set") & Filters.user("705138975"))
 def forward(client, message):
   x = message.text.split(" ")
   if x.casefold() == "ferrari".casefold():
