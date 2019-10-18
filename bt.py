@@ -3,7 +3,7 @@ from pyrogram.errors import FloodWait
 import time
 app =Client("mn",bot_token= "957765060:AAHnyj00seUNDAAWe4dYAeUoLMNx15PE6PY",api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
 k = -1001418036927
-u = 507138103
+u = 1243874983
 @app.on_message( Filters.text & ~Filters.edited & Filters.channel)
 def forward(client, message):
  fil = open("source.txt" , "r")
