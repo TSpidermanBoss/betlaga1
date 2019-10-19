@@ -30,7 +30,10 @@ def forward(client, message):
     id = str(message.message_id)
     if id in x:
      try:
-      client.edit_message_text(k,int(x[x.index(id)+1]),message.text)
+      if message.text == ".":   
+       client.delete_messages(k,int(x[x.index(id)+1]))
+      else:
+       client.edit_message_text(k,int(x[x.index(id)+1]),message.text)
      except FloodWait as e:
       time.sleep(e.x)
 @app.on_message(Filters.command("set") & Filters.user(u))
