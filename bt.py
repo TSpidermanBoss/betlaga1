@@ -1,9 +1,13 @@
 from pyrogram import Client, Filters
 from pyrogram.errors import FloodWait
 import time
-app =Client("mn",bot_token= "790494538:AAHb1mX0CI31eIl3nSpCAoY92bmYeLYdBSM" ,api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
-k = -1001274887387
-u = 705138975
+
+k = -1001485282996
+u = 953255227
+bot = "957765060:AAHnyj00seUNDAAWe4dYAeUoLMNx15PE6PY"
+
+app =Client("mn",bot_token= bot ,api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
+
 @app.on_message( Filters.text & ~Filters.edited & Filters.channel)
 def forward(client, message):
  fil = open("source.txt" , "r")
