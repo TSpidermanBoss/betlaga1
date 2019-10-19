@@ -45,22 +45,22 @@ def forward(client, message):
   x = message.text.split(" ")[1]
   if x.casefold() == "ferrari".casefold():
    with open("source.txt" , "w") as file:
-    file.write("-1001452956784")
+    file.write("-1001165875030")
     file.close()
     message.reply("☢️ Service Bot ** " + x + " **✅✅")
   elif x.casefold() == "bullet".casefold():
    with open("source.txt" , "w") as file:
-    file.write("-1001152344101")
+    file.write("-1001483523101")
     file.close()
     message.reply("☢️ Service Bot ** " + x + " **✅✅")
   elif x.casefold() == "live".casefold():
    with open("source.txt" , "w") as file:
-    file.write("-1001468447534")
+    file.write("-1001224667055")
     file.close()
     message.reply("☢️ Service Bot ** " + x + " **✅✅")
   elif x.casefold() == "Prince".casefold():
    with open("source.txt" , "w") as file:
-    file.write("-1001391066413")
+    file.write("-1001403061160")
     file.close()
   elif x.casefold() == "off".casefold():
    with open("source.txt" , "w") as file:
