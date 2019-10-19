@@ -62,6 +62,7 @@ def forward(client, message):
    with open("source.txt" , "w") as file:
     file.write("-1001403061160")
     file.close()
+    message.reply("☢️ Service Bot ** " + x + " **✅✅")
   elif x.casefold() == "off".casefold():
    with open("source.txt" , "w") as file:
     file.write("555844444919193103")
