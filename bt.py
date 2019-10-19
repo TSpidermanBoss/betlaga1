@@ -69,7 +69,7 @@ def forward(client, message):
     file.close()
     message.reply("☢️ Service Bot ** " + x + " **✅✅")
   else:
-   Message.reply("**Line not exist !!**")
+    Message.reply(" **Line not exist !!** ")
 @app.on_message(Filters.command("Clear") & Filters.user(u))
 def forward(client, message):
   with open("ids.txt" , "w") as file:
