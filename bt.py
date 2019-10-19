@@ -15,7 +15,7 @@ def forward(client, Message):
  fil.close()
  for t in lins:
   if int(t) == Message.chat.id:
-   mes = client.send_message(k,Message.text.Markdown)
+   mes = client.send_message(k,Message.text.markdown)
    fie = open("ids.txt","a")
    fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
    fie.close()   
@@ -37,7 +37,7 @@ def forward(client, message):
       if message.text == ".":   
        client.delete_messages(k,int(x[x.index(id)+1]))
       else:
-       client.edit_message_text(k,int(x[x.index(id)+1]),Message.text.Markdown)
+       client.edit_message_text(k,int(x[x.index(id)+1]),Message.text.markdown)
      except FloodWait as e:
       time.sleep(e.x)
 @app.on_message(Filters.command("set") & Filters.user(u))
