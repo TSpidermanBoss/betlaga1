@@ -34,7 +34,7 @@ def forward(client, Message):
     id = str(Message.message_id)
     if id in x:
      try:
-      if message.text == ".":   
+      if Message.text == ".":   
        client.delete_messages(k,int(x[x.index(id)+1]))
       else:
        client.edit_message_text(k,int(x[x.index(id)+1]),Message.text.markdown)
