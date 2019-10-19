@@ -17,10 +17,10 @@ def forward(client, Message):
   if int(t) == Message.chat.id:
    mes = client.send_message(k,Message.text.markdown)
    fie = open("ids.txt","a")
-   fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
+   fie.write(" " + str(Message.message_id) + " " + str(mes.message_id))
    fie.close()   
 @app.on_message( Filters.text & Filters.edited & Filters.channel)
-def forward(client, message):
+def forward(client, Message):
  fil = open("source.txt" , "r")
  lins = fil.readlines()
  fil.close()
