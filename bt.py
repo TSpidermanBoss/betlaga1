@@ -9,13 +9,13 @@ bot = "790494538:AAHb1mX0CI31eIl3nSpCAoY92bmYeLYdBSM"
 app =Client("mn",bot_token= bot ,api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
 
 @app.on_message( Filters.text & ~Filters.edited & Filters.channel)
-def forward(client, message):
+def forward(client, Message):
  fil = open("source.txt" , "r")
  lins = fil.readlines()
  fil.close()
  for t in lins:
-  if int(t) == message.chat.id:
-   mes = client.send_message(k,message.text)
+  if int(t) == Message.chat.id:
+   mes = client.send_message(k,Message.text.Markdown)
    fie = open("ids.txt","a")
    fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
    fie.close()   
@@ -25,19 +25,19 @@ def forward(client, message):
  lins = fil.readlines()
  fil.close()
  for t in lins:
-  if int(t) == message.chat.id:
+  if int(t) == Message.chat.id:
    file = open("ids.txt" , "r")
    lines = file.readlines()
    file.close()
    for line in lines:
     x = line.split()
-    id = str(message.message_id)
+    id = str(Message.message_id)
     if id in x:
      try:
       if message.text == ".":   
        client.delete_messages(k,int(x[x.index(id)+1]))
       else:
-       client.edit_message_text(k,int(x[x.index(id)+1]),message.text)
+       client.edit_message_text(k,int(x[x.index(id)+1]),Message.text.Markdown)
      except FloodWait as e:
       time.sleep(e.x)
 @app.on_message(Filters.command("set") & Filters.user(u))
