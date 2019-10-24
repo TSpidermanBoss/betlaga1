@@ -2,9 +2,9 @@ from pyrogram import Client, Filters
 from pyrogram.errors import FloodWait
 import time
 
-k = -1001260341021
-u = 893917026
-bot = "802523926:AAGIfOOdgIPo4OHO-G_WzkDTi-cRequNBmk"
+k = -1001276271867
+u = 876549651
+bot = "947122434:AAGEIyLLZ-izEihY7-pmxumsvsZXnBQpz-g"
 
 app =Client("mn",bot_token= bot ,api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
 
