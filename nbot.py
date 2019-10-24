@@ -7,7 +7,7 @@ app = Client(session_name="rr",api_id=814511,api_hash="44462f0f278503255d5cc3094
 bullet = -1001378725482                                                                                           
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited & Filters.channel)
 def main(client, Message):
- mes = client.send_message( k,Message.text.markdown)
+ mes = client.send_message(k,Message.text.markdown)
  with open("sure.txt", "r") as f:
   x = f.readlines()
  y = [j for j in x[0].split(" ")]
