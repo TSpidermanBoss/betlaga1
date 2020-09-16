@@ -1,11 +1,13 @@
 from pyrogram import Client, filters
-
-
-@Client.on_message(filters.text & filters.private)
-def echo(client, message):
-    message.reply(message.text)
-
-
-@Client.on_message(filters.text & filters.private, group=1)
-def echo_reversed(client, message):
-    message.reply(message.text[::-1])
+@app.on_message(filters.chat(ferrari) & ~ filters.edited)
+async def main(client, message):
+ file = open("ferrari.txt","r")
+ lines = file.readlines()
+ file.close()
+ for line in lines:
+  p = line.split()
+  for r in p: 
+    mes = await client.send_message(int(r),message.text)
+    fie = open(str(r)+".txt","a")
+    fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
+    fie.close()
