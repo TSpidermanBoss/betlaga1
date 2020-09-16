@@ -1,8 +1,9 @@
-from pyrogram import Client, Filters
+from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
+import time
 s = -100
-@app.on_message(Filters.chat(s) & Filters.edited)
-def main(client, message):
+@app.on_message(filters.chat(s) & filters.edited)
+async def main(client, message):
  file = open("ferrari.txt" , "r")
  lines = file.readlines()
  file.close()
@@ -18,8 +19,8 @@ def main(client, message):
     if id in x:
      try:
       if message.text == ".":
-       client.delete_messages(int(m),int(x[x.index(id)+1]))
+       await client.delete_messages(int(m),int(x[x.index(id)+1]))
       else:
-       client.edit_message_text(int(m),int(x[x.index(id)+1]),message.text.markdown )
+       await client.edit_message_text(int(m),int(x[x.index(id)+1]),message.text)
      except FloodWait as e:
        time.sleep(e.x)
