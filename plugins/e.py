@@ -1,10 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 import time
-
-from pyrogram import Client, filters
-from pyrogram.errors import FloodWait
-import time@app.on_message(filters.command('clear') & filters.user(491634139))
+@app.on_message(filters.command('clear') & filters.user(491634139))
 async def forward(client, message):
     file = open(message.text.split(" ")[1] + ".txt" , "r")
     lines = file.readlines()
