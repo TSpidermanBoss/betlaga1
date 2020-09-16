@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
-@app.on_message(filters.chat(ferrari) & ~ filters.edited)
+s = -100
+@app.on_message(filters.chat(s) & ~ filters.edited)
 async def main(client, message):
  file = open("ferrari.txt","r")
  lines = file.readlines()
