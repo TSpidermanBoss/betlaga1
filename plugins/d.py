@@ -1,3 +1,7 @@
+from pyrogram import Client, filters
+from pyrogram.errors import FloodWait
+import time
+
 @app.on_message(filters.command('remove') & filters.user(491634139))
 async def forward(client, message):
  if len(message.text.split(' ')) > 2:
