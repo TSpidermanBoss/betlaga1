@@ -20,3 +20,27 @@ async def forward(client, message):
     await message.reply("💼 Please write a valid chat id. ✅✅ ")
  else:
    await message.reply("💼 Please write a valid chat id. ✅✅ ")
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   with concurrent.futures.ThreadPoolExecutor(max_workers=100000) as executor:
+ executor.map(coder,lines[0].split())
